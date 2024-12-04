@@ -68,9 +68,9 @@ app.put('/books/:id', (req, res) => {
     const bookIndex = books.findIndex(book => book.id === bookId)
     if (bookIndex !== 1) {
         books[bookIndex] = {...books[bookIndex], ...req.body}
-        res.json({ message: "Book updated successfully", book: books[bookIndex]})
+        res.status(200).redirect('/books')
     } else {
-        res.send("book not found")
+        res.status('404/notFound', { title: 'Book Not Found' })
     }
 
 })

@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- Navigation Bar -->
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">📚 Show Book</a>
+        </div>
+    </nav>
+    <!-- TODO Main content -->
+    <div class="container">
+        <form action="" class="col s12">
+            <!--  Title Field -->
+            <div class="row">
+                <div class="input-filed col s12">
+                    <input type="text" name="title" value="<%= book.title %>" required>
+                    <label for="title">Title</label>
+                </div>
+            </div>
+            <!-- Author field -->
+            <div class="row">
+                <div class="input-filed col s12">
+                    <input type="text" name="author" value="<%= book.author %>" required>
+                    <label for="author">Author</label>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

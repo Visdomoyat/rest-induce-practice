@@ -38,9 +38,8 @@ app.get('/books', (req, res) => {
 // New
 app.get('/books/new', (req, res) => {
     // create a new item
-    res.json({ message: 'You are on a new page with an empty form to submit your new book.' });
-});
-
+    res.render('books/new', {title: 'New Book'})
+})
 //POST
 app.post('/books', (req, res) => {
     const newBook ={
@@ -49,16 +48,17 @@ app.post('/books', (req, res) => {
         author: req.body.author || "new book",
     }
     books.push(newBook);
-    res.status(201).json({ books, message: "Book craeated successfully"})
+    res.status(201).redirect('/books')
 })
+
 
 // SHOW
 app.get('/books/:id', (req, res) => {
     const book = books.find(book => book.id === parseInt(req.params.id));
     if (book) {
-        res.json(book)
+        res.render('books/show', { title: 'Book Details', book })
     } else {
-        res.status(404).json({message: "Book not found"})
+        res.status(404).render('404/notFound', { title: "Book not found" })
     }
 })
 

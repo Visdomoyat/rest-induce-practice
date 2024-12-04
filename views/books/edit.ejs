@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
     <title>Document</title>
 </head>
 
@@ -11,12 +12,12 @@
     <!-- Navigation Bar -->
     <nav class="teal">
         <div class="nav-wrapper">
-            <a href="/" class="brand-logo center">📚 Show Book</a>
+            <a href="/" class="brand-logo center">📚 Edit Book</a>
         </div>
     </nav>
     <!-- TODO Main content -->
     <div class="container">
-        <form action="" class="col s12">
+        <form action="/books/<%= book.id%>?method=PUT" class="col s12">
             <!--  Title Field -->
             <div class="row">
                 <div class="input-filed col s12">
@@ -31,6 +32,10 @@
                     <label for="author">Author</label>
                 </div>
             </div>
+               <!-- Submit button -->
+               <div class="row center-align">
+                <button type="submit" class="btn wave-effect wave-light teal">Update</button>
+                   </div>
         </form>
     </div>
 </body>

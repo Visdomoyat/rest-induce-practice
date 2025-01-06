@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('../partials/head') %>
-        <title><%= title  %></title>
+    <title>Document</title>
 </head>
 <body>
-<nav class="teal">
+    <!-- Navigation Bar -->
+   <nav class="teal">
     <div class="nav-wrapper">
         <a href="/" class="brand-logo center">📚 Library</a>
     </div>
-    <div class="container" id="bottomMargin">
-        <h2 class="center-align">Add a New Book</h2>
-
-   <!-- POST ROUTE -->
+   </nav>
+<!-- Main Content -->
+<div class="container" id="bottomMargin">
+<h2 class="center-align">Add a New Book</h2>
+<!-- POST ROUTE -->
 <form action="/books" method="POST" class="col s12">
     <div class="row">
         <div class="input-field col s12">
@@ -33,6 +35,6 @@
         <a href="/books" class="btn  waves-effect waves-light orange">Back</a>
     </div>
 </form>
-</nav>   
+</div>
 </body>
 </html>

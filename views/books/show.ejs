@@ -7,28 +7,26 @@
     <title><%= title %></title>
 </head>
 <body>
-   <!-- Navigation Bar -->
-   <nav class="teal">
-    <div class="nav-wrapper">
-        <a href="/" class="brand-logo center">📚 Edit Book</a>
-    </div>
-</nav>
-
-<!-- main content -->
- <div class="container bottomMargin">
-    <div class="card">
-        <div class="car-content">
-            <p><strong> Title: </strong><%= book.title  %></p>
-            <p><strong>Author:</strong><%= book.author %></p>
+    <!-- Navigation Bar -->
+    <nav class="teal">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">📚 Show Book</a>
         </div>
-        <div class="card-action">
-            <a href="/books/<%= book.id %>/edit" class="btn waves-effect waves-light teal">Edit</a>
-            
-            <form action="/books/<%= book.id %>?_method=DELETE" method="POST">   
-            <button class="btn red waves-effect waves-light">Delete</button>
-            </form>
+    </nav>
+    <!-- main content -->
+     <div class="container bottomMargin" >
+        <div class="card">
+            <div class="card-content">
+                <p><strong>Title:</strong><%= book.title %></p>
+                <p><strong>Author:</strong><%= book.author %></p>
+            </div>
+            <div class="card-action">
+                <a href="/books/<%= book.id %>/edit" class="btn waves-effect waves-light teal">Edit</a>
+                <form action="/books/<%= book.id %>?_method=DELETE" method="POST">
+                <button class="btn red waves-effect waves-light">Delete</button>
+                </form>
+            </div>
         </div>
-    </div>
- </div>
+     </div>
 </body>
 </html>

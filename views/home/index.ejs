@@ -7,6 +7,7 @@
     <title>Library📚</title>
 </head>
 <body>
+    <% if (user) { %>
      <!-- Navigation Bar -->
     <nav class="teal">
         <div class="nav-wrapper">
@@ -14,9 +15,17 @@
         </div>
     </nav>
 <div class="container">
-    <div class="center-align" style="margin-top: 40px;">
+    <div class="center-align" id="bottomMargin">
         <a href="/books" class="btn">Go to Books Page</a>
     </div>
     </div>
+    <% } else { %>
+          <!-- Welcome message for guests -->
+          <div class="welcome-message">
+            <h4>Welcome to the app, guest.</h4>
+            <p>
+                <a href="/auth/sign-up" class="btn teal">Sign up</a> or <a href="/auth/sign-in" class="btn teal">Sign in</a>            </p>
+        </div>
+        <% } %>
 </body>
 </html>
